@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  video:
+    image: streamberry:0.0.5
+    restart: always
+    container_name: container_streamberry
+    env_file:
+     - streamberry.env
+    ports:
+     - 8888:8888
+    devices:
+     - /dev/video0:/dev/video0
