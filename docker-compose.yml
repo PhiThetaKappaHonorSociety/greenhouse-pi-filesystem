@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   video:
-    image: streamberry:0.0.5
+    image: streamberry:1.0.1
     restart: always
     container_name: container_streamberry
     env_file:
