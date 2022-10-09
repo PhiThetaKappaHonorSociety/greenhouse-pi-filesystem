@@ -61,13 +61,17 @@ PUT IN RULES
 `KERNEL=="video[0-9]*", SUBSYSTEM=="video4linux", SUBSYSTEMS=="usb", ATTRS{idVendor}=="VENDOR_ID_HERE", ATTRS{idProduct}=="PRODUCT_ID_HERE", SYMLINK+="video-cam"`
 
 Check, validate, and restart system
+May be helpful: `udevadm monitor`
+
+Use to validate:
 ```
-udevadm monitor
-udevadm test $(udevadm info --query=path --name=video-cam) 2>&1
 sudo udevadm control --reload
-udevadm trigger
+sudo udevadm trigger
+udevadm test $(udevadm info --query=path --name=video-cam) 2>&1
+
 ls -la /dev/video*
 ```
+Then make sure settings persist after reboot
 `sudo reboot`
 
 
