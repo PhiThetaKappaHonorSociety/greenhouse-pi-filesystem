@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   video:
-    image: streamberry:1.4.1
+    image: tcrokicki/streamberry:2.0.0
     restart: always
     container_name: container_streamberry
     env_file:
@@ -10,3 +10,30 @@ services:
      - 8888:8888
     devices:
      - /dev/video-cam:/dev/video0
+
+  sensor_data_8B_1:
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.2.11
+#    platform: linux/arm64/v8
+#    platform: linux/arm/v7
+    restart: always
+    container_name: container_sensordata_8B_1
+    env_file:
+     - sensor_data_8B_1.env
+
+  sensor_data_C4_1:
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.2.11
+#    platform: linux/arm64/v8
+#    platform: linux/arm/v7
+    restart: always
+    container_name: container_sensordata_C4_1
+    env_file:
+     - sensor_data_C4_1.env
+
+  sensor_data_33_1:
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.2.11
+#    platform: linux/arm64/v8
+#    platform: linux/arm/v7
+    restart: always
+    container_name: container_sensordata_33_1
+    env_file:
+     - sensor_data_33_1.env
