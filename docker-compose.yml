@@ -17,6 +17,7 @@ services:
 #    platform: linux/arm/v7
     restart: always
     container_name: container_sensordata_8B_1
+    network_mode: "host"
     env_file:
      - sensor_data_8B_1.env
 
@@ -26,6 +27,7 @@ services:
 #    platform: linux/arm/v7
     restart: always
     container_name: container_sensordata_C4_1
+    network_mode: "host"
     env_file:
      - sensor_data_C4_1.env
 
@@ -35,5 +37,6 @@ services:
 #    platform: linux/arm/v7
     restart: always
     container_name: container_sensordata_33_1
+    network_mode: "host"
     env_file:
      - sensor_data_33_1.env
