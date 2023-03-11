@@ -12,7 +12,7 @@ services:
      - /dev/video-cam:/dev/video0
 
   sensor_data_8B_1:
-    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.2.11
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.0
 #    platform: linux/arm64/v8
 #    platform: linux/arm/v7
     restart: always
@@ -22,7 +22,7 @@ services:
      - sensor_data_8B_1.env
 
   sensor_data_C4_1:
-    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.2.11
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.0
 #    platform: linux/arm64/v8
 #    platform: linux/arm/v7
     restart: always
@@ -32,7 +32,7 @@ services:
      - sensor_data_C4_1.env
 
   sensor_data_33_1:
-    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.2.11
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.0
 #    platform: linux/arm64/v8
 #    platform: linux/arm/v7
     restart: always

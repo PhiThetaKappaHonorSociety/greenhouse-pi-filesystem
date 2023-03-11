@@ -25,9 +25,9 @@ alias python=python3
 alias pip=pip3
 Save and exit.
 
-Paste this code:
-
+Run this code:
 source ~/.bashrc
+
 We can now install the docker compose using pip
 
 sudo pip3 install docker-compose
