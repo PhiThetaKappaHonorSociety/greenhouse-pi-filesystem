@@ -12,9 +12,9 @@ services:
      - /dev/video-cam:/dev/video0
 
   sensor_data_8B_1:
-    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.0
-#    platform: linux/arm64/v8
-#    platform: linux/arm/v7
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.7
+ #   platform: linux/arm64/v8
+ #   platform: linux/arm/v7
     restart: always
     container_name: container_sensordata_8B_1
     network_mode: "host"
@@ -22,9 +22,9 @@ services:
      - sensor_data_8B_1.env
 
   sensor_data_C4_1:
-    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.0
-#    platform: linux/arm64/v8
-#    platform: linux/arm/v7
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.7
+ #   platform: linux/arm64/v8
+ #   platform: linux/arm/v7
     restart: always
     container_name: container_sensordata_C4_1
     network_mode: "host"
@@ -32,9 +32,9 @@ services:
      - sensor_data_C4_1.env
 
   sensor_data_33_1:
-    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.0
-#    platform: linux/arm64/v8
-#    platform: linux/arm/v7
+    image: tcrokicki/ptk-greenhouse-app-sensor_data_collector:v1.0.3.7
+ #   platform: linux/arm64/v8
+ #   platform: linux/arm/v7
     restart: always
     container_name: container_sensordata_33_1
     network_mode: "host"

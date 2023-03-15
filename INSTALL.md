@@ -49,10 +49,18 @@ See https://www.diyhobi.com/install-docker-and-compose-on-raspberry-pi-4/ for mo
 ### Set up Camera Symbolic Link
 This is so the video source is always the same for the script to run. Without this the source may be video0 or video2 or video11 etc
 
-Find first video (likely `/dev/video0`)
+Find video camera (likely `/dev/video0`)
+BE CAREFUL sometimes these devices are decieving
+I dont know how to prevent the issue but if you ever get errors `inappropriate ioctl for device` its because the wrong device is being referenced
+
+You can verify this by running
+`v4l2-ctl --info --device /dev/videoXXX`
+the device you want to reference is a capture device, NOT a metadata device
+
+### Create The Symbolic Link
+
 `sudo v4l2-ctl --device=/dev/videoXXX --all`
 `udevadm info --attribute-walk --path=$(udevadm info --query=path --name=/dev/videoXXX)`
-
 Once you find the correct video source, note the `idVendor` and the `idProduct`
 
 `sudo nano /etc/udev/rules.d/83-webcam.rules`
